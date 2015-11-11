@@ -1,0 +1,50 @@
+//
+//  login_signupViewController.m
+//  Auctions
+//
+//  Created by Blake Mabe on 3/3/15.
+//  Copyright (c) 2015 QuantumWareApps. All rights reserved.
+//
+
+#import "login_signupViewController.h"
+#import <Parse/Parse.h>
+
+@interface login_signupViewController ()
+
+@end
+
+@implementation login_signupViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+    //Enters app if user already logged in on device
+    PFUser *user = [PFUser currentUser];
+    if(user.username != nil)
+    {
+        [self performSegueWithIdentifier:@"skip" sender:self];
+    }
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

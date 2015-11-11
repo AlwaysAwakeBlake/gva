@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AuctionTableViewController.h
 //  Auctions
 //
 //  Created by Blake Mabe on 3/3/15.
@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface AuctionTableViewController : PFQueryTableViewController
 
 @end
-
